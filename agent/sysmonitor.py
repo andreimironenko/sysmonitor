@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 The sysmonitor module implements SysMonitor class which controlls all system critical parameters such as:
@@ -41,7 +41,6 @@ TODO:
 from os import (
     listdir,
     path,
-    environ
 )
 
 import sys
@@ -77,7 +76,7 @@ class SysMonitor(object):
     """
 
     namespace = dict()
-    monitor_home = path.join(environ["OCPP_HOME"], "sysmonitor", "monitors")
+    monitor_home = path.join("..","monitors")
     klasses = dict()
 
     def __new__(cls):
